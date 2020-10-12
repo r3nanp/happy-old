@@ -4,9 +4,9 @@
   ![license mit](https://img.shields.io/github/license/r3nanp/happy?color=blue&logo=github&style=plastic)
 
   ![happy](https://img.shields.io/badge/r3nanp-happy-blue?style=plastic&logo=github)
-</div>
 
 # Happy
+</div>
 
 A app to make orphanages more close to **you**!! Made with 💖. Written in React, Node and React Native.
 
