@@ -13,7 +13,7 @@ A app to make orphanages more close to **you**!! Made with 💖. Written in Reac
 ## Techologies used
 
 - Typescript
-- <a href="./.github/Techologies/React.md">React</a>
+- <a href="./.github/Techologies/README.md">React</a>
 - Node
 - Expo (React Native)
 
