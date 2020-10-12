@@ -1,10 +1,10 @@
-<p align="center">
+<div align="center">
   <!-- <img src=""> -->
 
   ![license mit](https://img.shields.io/github/license/r3nanp/happy?color=blue&logo=github&style=plastic)
 
   ![happy](https://img.shields.io/badge/r3nanp-happy-blue?style=plastic&logo=github)
-</p>
+</div>
 
 # Happy
 
