@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import { Container, Wrapper, Location, ArrowIcon } from './styles'
 
@@ -20,9 +21,9 @@ const Landing: React.FC = () => {
           <span>Ceará</span>
         </Location>
 
-        <a href="#">
+        <Link to="/app">
           <ArrowIcon />
-        </a>
+        </Link>
       </Wrapper>
     </Container>
 

@@ -10,6 +10,9 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
 `
 
 export const Wrapper = styled.div`
