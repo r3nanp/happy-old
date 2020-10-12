@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { Map } from 'react-leaflet'
+import { Map, TileLayer } from 'react-leaflet'
 
-import { Container, SideBar, RegionMap, ArrowIcon } from './styles'
+import 'leaflet/dist/leaflet.css'
+
+import { Container, SideBar, ArrowIcon } from './styles'
 
 import mapMarkerImg from '../../images/map-marker.svg'
 
@@ -12,7 +14,7 @@ const OrphanagesMap: React.FC = () => {
     <Container>
       <SideBar>
         <header>
-          <img src={mapMarkerImg} alt="Happy"/>
+          <img src={mapMarkerImg} alt="Happy" />
 
           <h2>Escolha um orfanato no mapa</h2>
           <p>Muitas crianças estão esperando sua visita 😊</p>
@@ -22,12 +24,15 @@ const OrphanagesMap: React.FC = () => {
           <strong>Fortaleza</strong>
           <span>Ceará</span>
         </footer>
-
       </SideBar>
 
-      <RegionMap>
-
-      </RegionMap>
+      <Map
+        center={[-3.7305253, -38.5311193]}
+        zoom={15}
+        style={{ width: '100%', height: '100%' }}
+      >
+        <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+      </Map>
 
       <Link to="" className="create-orphanage">
         <ArrowIcon />

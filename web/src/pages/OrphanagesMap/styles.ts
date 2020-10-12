@@ -9,6 +9,7 @@ export const Container = styled.div`
   display: flex;
 
   .create-orphanage {
+    z-index: 1000;
     position: absolute;
     right: 40px;
     bottom: 40px;
@@ -63,8 +64,6 @@ export const SideBar = styled.aside`
     }
   }
 `
-
-export const RegionMap = styled.div``
 
 export const ArrowIcon = styled(FiPlus)`
   size: 32;
