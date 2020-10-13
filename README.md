@@ -19,13 +19,13 @@
 
 ## How to run and contribute 🤔
 
-### React
-
 ```
 # Clone repository
 
 git clone https://github.com/r3nanp/happy.git
 ```
+
+### React
 
 ```
 # At the root of the project, run:
