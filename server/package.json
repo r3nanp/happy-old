@@ -2,8 +2,20 @@
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
+  "author": {
+    "name": "Renan Pereira",
+    "email": "renanmol87@gmail.com",
+    "url": "https://github.com/r3nanp"
+  },
   "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts"
+  },
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.0.0-pre.63",
+    "typescript": "^4.0.3"
   }
 }
