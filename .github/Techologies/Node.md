@@ -4,3 +4,5 @@
 - typeORM
 - sqlite3
 - multer
+- cors
+- yup
