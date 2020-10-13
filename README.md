@@ -22,7 +22,27 @@
 ```
 # Clone repository
 
-git clone https://github.com/r3nanp/happy.git
+$ git clone https://github.com/r3nanp/happy.git
+```
+
+### How to Fork the project
+
+```
+# Create a new branch with your changes:
+
+$ git checkout -b <branch>
+```
+
+```
+# Save your changes and create a commit message telling you what you did:
+
+$ git commit -m "<commit>"
+```
+
+```
+# Submit your changes:
+
+$ git push origin <branch>
 ```
 
 ### React
@@ -30,15 +50,15 @@ git clone https://github.com/r3nanp/happy.git
 ```
 # At the root of the project, run:
 
-cd web
+$ cd web
 
-yarn or npm install
+$ yarn or npm install
 ```
 
 ```
 # To run the app in your machine:
 
-yarn start or npm run start
+$ yarn start or npm run start
 ```
 
 ### Node
@@ -46,7 +66,7 @@ yarn start or npm run start
 ```
 # To run the app in your machine:
 
-cd server
+$ cd server
 
-yarn dev or npm run dev
+$ yarn dev or npm run dev
 ```
