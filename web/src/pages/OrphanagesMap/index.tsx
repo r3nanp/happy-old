@@ -5,7 +5,7 @@ import { Map, TileLayer } from 'react-leaflet'
 
 import 'leaflet/dist/leaflet.css'
 
-import { Container, SideBar, ArrowIcon } from './styles'
+import { Container, SideBar, PlusIcon, ArrowIcon } from './styles'
 
 import mapMarkerImg from '../../images/map-marker.svg'
 
@@ -23,7 +23,12 @@ const OrphanagesMap: React.FC = () => {
         <footer>
           <strong>Fortaleza</strong>
           <span>Ceará</span>
+
+          <Link to="/" className="backToMenu">
+            <ArrowIcon />
+          </Link>
         </footer>
+
       </SideBar>
 
       <Map
@@ -35,7 +40,7 @@ const OrphanagesMap: React.FC = () => {
       </Map>
 
       <Link to="" className="create-orphanage">
-        <ArrowIcon />
+        <PlusIcon />
       </Link>
     </Container>
   )
