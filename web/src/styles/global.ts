@@ -15,4 +15,12 @@ export default createGlobalStyle`
   body, input, button, textarea {
     font: 600 18px Nunito, sans-serif;
   }
+
+  :root {
+    --primary: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+    --link-color: #15c3d6;
+    --link-color-hover: #17d6db;
+    --yellow: #ffd666;
+    --link-box-shadow: 17.2868px 27.6589px 41.4884px rgba(23, 142, 166, 0.16);;
+  }
 `
