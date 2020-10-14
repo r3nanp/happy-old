@@ -1,6 +1,5 @@
-import styled from 'styled-components'
-import { FiPlus } from 'react-icons/fi'
-import { FiArrowLeft } from 'react-icons/fi'
+import styled, { css } from 'styled-components'
+import { FiArrowRight, FiPlus, FiArrowLeft } from 'react-icons/fi'
 
 export const Container = styled.div`
   width: 100vw;
@@ -17,7 +16,7 @@ export const Container = styled.div`
 
     width: 64px;
     height: 64px;
-    background: #15c3d6;
+    background: var(--link-color);
     border-radius: 20px;
 
     display: flex;
@@ -26,14 +25,47 @@ export const Container = styled.div`
     transition: background-color 0.2s;
 
     &:hover {
-      background: #17d6db;
+      background: var(--link-color-hover);
     }
+  }
+
+  .map-popup .leaflet-popup-content-wrapper {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: none;
+  }
+
+  .map-popup .leaflet-popup-content {
+    color: #0089a5;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 8px 12px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .map-popup .leaflet-popup-content a {
+    width: 40px;
+    height: 40px;
+    background: var(--link-color);
+    box-shadow: var(--link-box-shadow);
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .map-popup .leaflet-popup-tip-container {
+    display: none;
   }
 `
 
 export const SideBar = styled.aside`
   width: 440px;
-  background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+  background: var(--primary);
   padding: 80px;
 
   display: flex;
@@ -70,29 +102,36 @@ export const SideBar = styled.aside`
     }
 
     .backToMenu {
-    width: 64px;
-    height: 64px;
-    background: #ffd666;
-    border-radius: 20px;
+      width: 64px;
+      height: 64px;
+      background: #ffd666;
+      border-radius: 20px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.2s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.2s;
 
-    &:hover {
-      background: #17d6db;
-    }
+      &:hover {
+        background: var(--link-color-hover);
+      }
     }
   }
 `
 
-export const PlusIcon = styled(FiPlus)`
+const iconCSS = css`
   size: 32;
   color: white;
+`
+
+export const PlusIcon = styled(FiPlus)`
+  ${iconCSS}
 `
 
 export const ArrowIcon = styled(FiArrowLeft)`
   size: 26;
   color: rgba(0, 0, 0, 0.6);
+`
+export const ArrowIconRight = styled(FiArrowRight)`
+  ${iconCSS}
 `
