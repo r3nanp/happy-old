@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { Map, Marker, TileLayer } from 'react-leaflet'
+import { LeafletMouseEvent } from 'leaflet'
 
 import { Container, Wrapper, Register, PlusIcon, Visit } from './styles'
 import SideBar from '../../components/SideBar'
@@ -8,6 +9,16 @@ import SideBar from '../../components/SideBar'
 import mapIcon from '../../utils/MapIcon'
 
 const CreateOrphanage: React.FC = () => {
+  const [position, setPosition] = useState({ latitude: 0, longitude: 0 })
+
+  function handleMapClick(event: LeafletMouseEvent) {
+    const { lat, lng } = event.latlng
+    setPosition({
+      latitude: lat,
+      longitude: lng,
+    })
+  }
+
   return (
     <Container>
       <SideBar />
@@ -21,16 +32,17 @@ const CreateOrphanage: React.FC = () => {
               center={[-3.7305253, -38.5311193]}
               style={{ width: '100%', height: 280 }}
               zoom={15}
+              onClick={handleMapClick}
             >
-              <TileLayer
-                url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              />
+              <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-              <Marker
-                interactive={false}
-                icon={mapIcon}
-                position={[-3.7305253, -38.5311193]}
-              />
+              {position.latitude !== 0 && (
+                <Marker
+                  interactive={false}
+                  icon={mapIcon}
+                  position={[position.latitude, position.longitude]}
+                />
+              )}
             </Map>
 
             <div className="input-block">

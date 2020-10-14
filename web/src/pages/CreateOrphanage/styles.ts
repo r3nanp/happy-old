@@ -144,6 +144,12 @@ export const Register = styled.fieldset`
   > legend {
     ${legendCss}
   }
+
+  .leaflet-container {
+    margin-bottom: 40px;
+    border: 1px solid #d3e2e5;
+    border-radius: 20px;
+  }
 `
 
 export const Visit = styled.fieldset`
