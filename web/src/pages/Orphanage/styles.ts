@@ -162,6 +162,12 @@ export const OpenOnWeekends = styled.div`
   background: linear-gradient(154.16deg, #edfff6 7.85%, #ffffff 91.03%);
   border: 1px solid #a1e9c5;
   color: #37c77f;
+
+  .dont-open {
+    background: linear-gradient(154.16deg, #fdf0f5 7.85%, #ffffff 91.03%);
+    border: 1px solid #ffbcd4;
+    color: #ff669d;
+  }
 `
 
 export const ArrowIconLeft = styled(FiArrowLeft)`
