@@ -5,7 +5,7 @@ import landingImg from '../../images/landing.svg'
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+  background: var(--primary);
 
   display: flex;
   justify-content: center;
@@ -39,7 +39,7 @@ export const Wrapper = styled.div`
     width: 80px;
     height: 80px;
 
-    background: #ffd666;
+    background: var(--yellow);
     border-radius: 30px;
     display: flex;
     align-items: center;
