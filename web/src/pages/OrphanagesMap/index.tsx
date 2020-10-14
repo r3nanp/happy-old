@@ -61,7 +61,7 @@ const OrphanagesMap: React.FC = () => {
         </Marker>
       </Map>
 
-      <Link to="" className="create-orphanage">
+      <Link to="/orphanages/create" className="create-orphanage">
         <PlusIcon />
       </Link>
     </Container>
