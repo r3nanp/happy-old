@@ -65,13 +65,21 @@ export const Wrapper = styled.div`
       ${inputCss}
     }
 
+    .input-block input[type='file'] {
+      visibility: hidden;
+    }
+
     .input-block .new-image {
-      width: 100%;
-      height: 64px;
+      width: 20%;
+      height: 96px;
       background: #f5f8fa;
       border: 1px dashed #96d2f0;
       border-radius: 20px;
       cursor: pointer;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .input-block .button-select {
@@ -79,7 +87,7 @@ export const Wrapper = styled.div`
       grid-template-columns: 1fr 1fr;
     }
 
-    .button-select button {
+    .input-block .button-select button {
       height: 64px;
       background: #f5f8fa;
       border: 1px solid #d3e2e5;
@@ -158,6 +166,19 @@ export const Visit = styled.fieldset`
 
   > legend {
     ${legendCss}
+  }
+`
+
+export const ImageContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 16px;
+
+  > img {
+    width: 100%;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 20px;
   }
 `
 
