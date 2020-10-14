@@ -3,20 +3,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
-import Leaflet from 'leaflet'
-
-import 'leaflet/dist/leaflet.css'
-
-import { Container, SideBar, PlusIcon, ArrowIcon, ArrowIconRight } from './styles'
 
 import mapMarkerImg from '../../images/map-marker.svg'
+import mapIcon from '../../utils/MapIcon'
 
-const mapIcon = Leaflet.icon({
-  iconUrl: mapMarkerImg,
-  iconSize: [58, 68],
-  iconAnchor: [29, 68],
-  popupAnchor: [170, 2]
-})
+import { Container, SideBar, PlusIcon, ArrowIcon, ArrowIconRight } from './styles'
 
 const OrphanagesMap: React.FC = () => {
   return (
@@ -53,7 +44,7 @@ const OrphanagesMap: React.FC = () => {
 
           <Popup closeButton={false} minWidth={248} minHeight={248} className="map-popup">
             Lar Amigos de Jesus
-            <Link to="">
+            <Link to="/orphanages/1">
               <ArrowIconRight />
             </Link>
 

@@ -2,9 +2,6 @@
 import React from 'react'
 
 import { Map, Marker, TileLayer } from 'react-leaflet'
-import L from 'leaflet'
-
-import mapMarkerImg from '../../images/map-marker.svg'
 
 import {
   Container,
@@ -22,14 +19,7 @@ import {
 } from './styles'
 
 import SideBar from '../../components/SideBar'
-
-const happyMapIcon = L.icon({
-  iconUrl: mapMarkerImg,
-
-  iconSize: [58, 68],
-  iconAnchor: [29, 68],
-  popupAnchor: [0, -60],
-})
+import mapIcon from '../../utils/MapIcon'
 
 const Orphanage: React.FC = () => {
   return (
@@ -104,7 +94,7 @@ const Orphanage: React.FC = () => {
                 />
                 <Marker
                   interactive={false}
-                  icon={happyMapIcon}
+                  icon={mapIcon}
                   position={[-3.7305253, -38.5311193]}
                 />
               </Map>
