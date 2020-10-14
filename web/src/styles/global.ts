@@ -18,6 +18,7 @@ export default createGlobalStyle`
 
   :root {
     --primary: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+    --bg: #0089a5;
     --link-color: #15c3d6;
     --link-color-hover: #17d6db;
     --yellow: #ffd666;
