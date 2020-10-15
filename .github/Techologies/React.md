@@ -4,3 +4,5 @@
 - leaflet
 - styled-components
 - axios
+
+Check the package.json

@@ -10,7 +10,7 @@
   Made with 💖. Written in React, Node and React Native.
 </p>
 
-## Techologies used
+## Techologies used 🛠
 
 - Typescript
 - <a href="./.github/Techologies/React.md">React</a>
@@ -25,7 +25,7 @@
 $ git clone https://github.com/r3nanp/happy.git
 ```
 
-### How to Fork the project
+### How to Fork the project 💪
 
 ```
 # Create a new branch with your changes:
