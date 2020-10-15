@@ -15,7 +15,7 @@
 - Typescript
 - <a href="./.github/Techologies/React.md">React</a>
 - <a href="./.github/Techologies/Node.md">Node</a>
-- Expo (React Native)
+- <a href="./.github/Techologies/ReactNative.md"> React Native (Expo) </a>
 
 ## How to run and contribute 🤔
 
@@ -69,4 +69,17 @@ $ yarn start or npm run start
 $ cd server
 
 $ yarn dev or npm run dev
+```
+
+### React Native
+- **Install the expo client in your phone run the app locally.**
+
+```
+# To run the app in your phone:
+
+$ cd mobile
+
+$ yarn or npm install
+
+$ yarn start or expo start
 ```
