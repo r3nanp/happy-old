@@ -1,6 +1,9 @@
 import styled from 'styled-components/native'
 
 export const Container = styled.View`
+  flex: 1;
+`
+export const CalloutContainer = styled.View`
   width: 160px;
   height: 46px;
   padding-left: 16px;
