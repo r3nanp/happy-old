@@ -1,14 +1,21 @@
 import React from 'react'
+import { useNavigation } from '@react-navigation/native'
 import { Dimensions, StyleSheet } from 'react-native'
 
 import MapView, { Callout, Marker, PROVIDER_GOOGLE } from 'react-native-maps'
 import Footer from '../../components/Footer'
 
-import mapMarker from '../images/mapMarker.png'
+import mapMarker from '../../images/mapMarker.png'
 
 import { Container, CalloutContainer, MarkerName } from './styles'
 
 const OrphanagesMap: React.FC = () => {
+  const navigation = useNavigation()
+
+  function handleNavigateToOrphanageDetail() {
+    navigation.navigate('OrphanageDetails')
+  }
+
   return (
     <Container>
       <MapView
@@ -34,9 +41,7 @@ const OrphanagesMap: React.FC = () => {
         >
           <Callout
             tooltip
-            onPress={() => {
-              alert('oi')
-            }}
+            onPress={handleNavigateToOrphanageDetail}
           >
             <CalloutContainer>
               <MarkerName>Amigos de Jesus</MarkerName>
