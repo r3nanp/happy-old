@@ -13,6 +13,10 @@ export const Container = styled.div`
 
   padding-top: 15px;
   padding-bottom: 15px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 export const Wrapper = styled.div`
@@ -65,7 +69,16 @@ export const Wrapper = styled.div`
       font-size: 24px;
       line-height: 34px;
     }
+  }
 
+  @media (max-width: 768px) {
+    background: none;
+
+    align-items: center;
+    > a {
+      position: inherit;
+      flex-direction: column;
+    }
   }
 `
 
@@ -83,6 +96,11 @@ export const Location = styled.div`
 
   > strong {
     font-weight: 800px;
+  }
+
+  @media (max-width: 768px) {
+    position: inherit;
+    text-align: center;
   }
 `
 export const ArrowIcon = styled(FiArrowRight)`
