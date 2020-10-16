@@ -35,7 +35,7 @@ export const MapContainer = styled.View`
   background-color: #e6f7fb;
 `
 
-export const RoutesContainer = styled.View`
+export const RoutesContainer = styled.TouchableOpacity`
   padding: 16px;
   align-items: center;
   justify-content: center;
@@ -60,20 +60,9 @@ export const ScheduleContainer = styled.View`
   justify-content: space-between;
 `
 
-export const ScheduleItem = styled.View`
-  width: 48%;
-  padding: 20px;
-`
-export const ScheduleText = styled.Text`
-  font-family: nunito_600;
-  font-size: 16px;
-  line-height: 24px;
-  margin-top: 20px;
-`
-
 export const ContactText = styled.Text`
   font-family: nunito_800;
-  color: #FFF;
+  color: #fff;
   font-size: 16px;
   margin-left: 16px;
 `
