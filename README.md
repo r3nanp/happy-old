@@ -1,8 +1,9 @@
 <div align="center">
 
-  <img src="./.github/assets/happy-front.png" height="150">
-
 # Happy
+
+  <img src="./.github/assets/happy.png" >
+
 </div>
 
 <p align="center">
