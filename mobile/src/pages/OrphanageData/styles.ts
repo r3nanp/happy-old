@@ -41,7 +41,7 @@ export const InputTextArea = styled.TextInput`
   height: 110px;
 `
 
-export const SelectImages = styled.View`
+export const SelectImages = styled.TouchableOpacity`
   background-color: rgba(255, 255, 255, 0.5);
   border-style: dashed;
   border-color: #96d2f0;
@@ -51,6 +51,10 @@ export const SelectImages = styled.View`
   justify-content: center;
   align-items: center;
   margin-bottom: 32px;
+`
+
+export const UploadedImagesContainer = styled.View`
+  flex-direction: row;
 `
 
 export const SwitchContainer = styled.View`
