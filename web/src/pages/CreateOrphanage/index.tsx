@@ -3,20 +3,32 @@ import { useHistory } from 'react-router-dom'
 
 import { Map, Marker, TileLayer } from 'react-leaflet'
 import { LeafletMouseEvent } from 'leaflet'
+import { Form } from '@unform/web'
 
-import { Container, Wrapper, Register, ImageContainer, PlusIcon, Visit } from './styles'
+import {
+  Container,
+  Wrapper,
+  Register,
+  ImageContainer,
+  PlusIcon,
+  Visit,
+} from './styles'
+
 import SideBar from '../../components/SideBar'
 
 import mapIcon from '../../utils/MapIcon'
 import api from '../../services/api'
+import Input from '../../components/Input'
 
 const CreateOrphanage: React.FC = () => {
   const history = useHistory()
 
-  const [position, setPosition] = useState({ latitude: -3.7478596, longitude: -38.5203472 })
+  const [position, setPosition] = useState({
+    latitude: -3.7478596,
+    longitude: -38.5203472,
+  })
 
   // Form state
-  const [name, setName] = useState('')
   const [about, setAbout] = useState('')
   const [instructions, setInstructions] = useState('')
   const [opening_hours, setOpeningHours] = useState('')
@@ -35,7 +47,7 @@ const CreateOrphanage: React.FC = () => {
   }
 
   function handleSelectImages(event: ChangeEvent<HTMLInputElement>) {
-    if(!event.target.files) {
+    if (!event.target.files) {
       return
     }
 
@@ -57,7 +69,6 @@ const CreateOrphanage: React.FC = () => {
 
     const data = new FormData()
 
-    data.append('name', name)
     data.append('latitude', String(latitude))
     data.append('longitude', String(longitude))
     data.append('about', about)
@@ -81,7 +92,7 @@ const CreateOrphanage: React.FC = () => {
       <SideBar />
 
       <Wrapper>
-        <form className="create-orphanage-form" onSubmit={handleSubmit}>
+        <Form className="create-orphanage-form" onSubmit={handleSubmit}>
           <Register>
             <legend>Dados</legend>
 
@@ -104,11 +115,13 @@ const CreateOrphanage: React.FC = () => {
 
             <div className="input-block">
               <label htmlFor="name">Nome</label>
-              <input
+              {/* <input
                 id="name"
                 value={name}
-                onChange={(event) => setName(event.target.value)}
-              />
+                onChange={event => setName(event.target.value)}
+              /> */}
+
+              <Input id="name" name="name" />
             </div>
 
             <div className="input-block">
@@ -119,7 +132,7 @@ const CreateOrphanage: React.FC = () => {
                 id="name"
                 maxLength={300}
                 value={about}
-                onChange={(event) => setAbout(event.target.value)}
+                onChange={event => setAbout(event.target.value)}
               />
             </div>
 
@@ -128,9 +141,7 @@ const CreateOrphanage: React.FC = () => {
 
               <ImageContainer>
                 {previewImages.map(image => {
-                  return (
-                    <img key={image} src={image} alt={name} />
-                  )
+                  return <img key={image} src={image} alt="Preview" />
                 })}
 
                 <label htmlFor="image[]" className="new-image">
@@ -138,7 +149,12 @@ const CreateOrphanage: React.FC = () => {
                 </label>
               </ImageContainer>
 
-              <input multiple onChange={handleSelectImages} type="file" id="image[]"/>
+              <input
+                multiple
+                onChange={handleSelectImages}
+                type="file"
+                id="image[]"
+              />
             </div>
           </Register>
 
@@ -150,7 +166,7 @@ const CreateOrphanage: React.FC = () => {
               <textarea
                 id="instructions"
                 value={instructions}
-                onChange={(event) => setInstructions(event.target.value)}
+                onChange={event => setInstructions(event.target.value)}
               />
             </div>
 
@@ -159,7 +175,7 @@ const CreateOrphanage: React.FC = () => {
               <input
                 id="opening_hours"
                 value={opening_hours}
-                onChange={(event) => setOpeningHours(event.target.value)}
+                onChange={event => setOpeningHours(event.target.value)}
               />
             </div>
 
@@ -188,7 +204,7 @@ const CreateOrphanage: React.FC = () => {
           <button className="confirm-button" type="submit">
             Confirmar
           </button>
-        </form>
+        </Form>
       </Wrapper>
     </Container>
   )
