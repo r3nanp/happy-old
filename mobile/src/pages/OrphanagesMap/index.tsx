@@ -39,14 +39,10 @@ const OrphanagesMap: React.FC = () => {
             longitude: -38.5311193,
           }}
         >
-          <Callout
-            tooltip
-            onPress={handleNavigateToOrphanageDetail}
-          >
+          <Callout tooltip onPress={handleNavigateToOrphanageDetail}>
             <CalloutContainer>
               <MarkerName>Amigos de Jesus</MarkerName>
             </CalloutContainer>
-
           </Callout>
         </Marker>
       </MapView>
