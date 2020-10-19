@@ -86,6 +86,7 @@ const OrphanageData: React.FC = () => {
 
     setImages([...images, image])
   }
+
   return (
     <Container contentContainerStyle={{ padding: 30 }}>
       <FormTitle>Dados</FormTitle>
