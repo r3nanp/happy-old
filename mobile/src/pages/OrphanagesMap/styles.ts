@@ -34,6 +34,15 @@ export const Footer = styled.View`
   align-items: center;
 
   elevation: 3;
+
+  shadow-color: #000;
+  shadow-offset: {
+    width: 0;
+    height: 1;
+  }
+
+  shadow-opacity: 0.22;
+  shadow-radius: 2.22px;
 `
 
 export const OrphanagesText = styled.Text`
