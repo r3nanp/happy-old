@@ -9,12 +9,19 @@ import mapMarkerImg from '../../images/mapMarker.png'
 import { Container, NextButton } from './styles'
 import { getCurrentPositionAsync, requestPermissionsAsync } from 'expo-location'
 
+interface InitialPositionProps {
+  latitude: number
+  longitude: number
+  latitudeDelta: number
+  longitudeDelta: number
+}
+
 const SelectMapPosition: React.FC = () => {
   const navigation = useNavigation()
 
   const [position, setPosition] = useState({ latitude: 0, longitude: 0 })
 
-  const [initialPosition, setInitialPosition] = useState(null)
+  const [initialPosition, setInitialPosition] = useState<InitialPositionProps>()
 
   useEffect(() => {
     async function getYourPhoneLocation() {
