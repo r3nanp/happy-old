@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 
 import { Dimensions, StyleSheet } from 'react-native'
@@ -7,10 +7,37 @@ import MapView, { MapEvent, Marker } from 'react-native-maps'
 import mapMarkerImg from '../../images/mapMarker.png'
 
 import { Container, NextButton } from './styles'
+import { getCurrentPositionAsync, requestPermissionsAsync } from 'expo-location'
 
 const SelectMapPosition: React.FC = () => {
   const navigation = useNavigation()
+
   const [position, setPosition] = useState({ latitude: 0, longitude: 0 })
+
+  const [initialPosition, setInitialPosition] = useState(null)
+
+  useEffect(() => {
+    async function getYourPhoneLocation() {
+      const { status } = await requestPermissionsAsync()
+
+      if (status !== 'granted') {
+        alert('Eita, precisamos da sua localização...')
+        return
+      }
+
+      const { coords } = await getCurrentPositionAsync()
+
+      const { latitude, longitude } = coords
+
+      setInitialPosition({
+        latitude,
+        longitude,
+        latitudeDelta: 0.008,
+        longitudeDelta: 0.008,
+      })
+    }
+    getYourPhoneLocation()
+  }, [])
 
   function handleNextStep() {
     navigation.navigate('OrphanageData', { position })
@@ -23,12 +50,7 @@ const SelectMapPosition: React.FC = () => {
   return (
     <Container>
       <MapView
-        initialRegion={{
-          latitude: -3.7305253,
-          longitude: -38.5311193,
-          latitudeDelta: 0.008,
-          longitudeDelta: 0.008,
-        }}
+        initialRegion={initialPosition}
         style={styles.mapStyle}
         onPress={handleSelectMapPosition}
       >
