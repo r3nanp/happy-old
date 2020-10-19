@@ -1,14 +1,16 @@
 {
+  "main": "node_modules/expo/AppEntry.js",
   "author": {
     "name": "Renan Pereira",
     "email": "renanmol87@gmail.com",
     "url": "https://github.com/r3nanp"
   },
   "scripts": {
-    "start": "react-native start",
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "web": "expo start --web"
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
   },
   "dependencies": {
     "expo": "~39.0.2",
