@@ -19,8 +19,10 @@ interface InitialPositionProps {
 const SelectMapPosition: React.FC = () => {
   const navigation = useNavigation()
 
-  const [position, setPosition] = useState({ latitude: 0, longitude: 0 })
-
+  const [position, setPosition] = useState({
+    latitude: 0,
+    longitude: 0
+  })
   const [initialPosition, setInitialPosition] = useState<InitialPositionProps>()
 
   useEffect(() => {
